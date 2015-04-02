@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<br>
+<p>Hostname: <%= @hostname %></p>
+<p>Query string: <%= @query_string %></p>
+<br>
+<% for header in @http_headers %>
+  <p><%= header[0] %>: <%= header[1] %></p>
+<% end %>
+<br>
+<p>Remote address: <%= @remote_addr %></p>
+<p>Remote host: <%= @remote_host %></p>
