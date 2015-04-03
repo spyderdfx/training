@@ -1,0 +1,15 @@
+<h1>Products#new</h1>
+<p>Find me in app/views/products/new.html.erb</p>
+<% provide(:title, 'Создание товара') %>
+<h1>Создать товар</h1>
+
+<div>
+  <div>
+    <%= form_for [@group, @product] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Создать товар", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

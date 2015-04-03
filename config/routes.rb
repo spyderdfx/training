@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   scope ':category' do
     resources :article
   end
+
+  resources :groups do
+    resources :products
+  end
+
+  #get '*slug/article/:id', to: 'article#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

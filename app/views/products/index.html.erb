@@ -1,0 +1,7 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+<h2>Группа "<%= @group.name %>" </h2>
+<h3>Товары:</h3>
+<% for product in @products %>
+  <p><%= product.id %>. <%= product.name %></p>
+<% end %>

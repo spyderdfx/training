@@ -1,0 +1,6 @@
+<h1>Groups#index</h1>
+<p>Find me in app/views/groups/index.html.erb</p>
+<h3>Группы:</h3>
+<% for group in @groups %>
+  <p><%= group.id %>. <%= group.name %></p>
+<% end %>

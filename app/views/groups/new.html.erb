@@ -1,0 +1,14 @@
+<h1>Groups#new</h1>
+<p>Find me in app/views/groups/new.html.erb</p>
+<h1>Создать группу</h1>
+
+<div>
+  <div>
+    <%= form_for [@group] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Создать группу", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

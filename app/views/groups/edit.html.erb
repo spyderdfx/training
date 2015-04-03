@@ -1,0 +1,17 @@
+<h1>Groups#edit</h1>
+<p>Find me in app/views/groups/edit.html.erb</p>
+<% provide(:title, 'Изменение группы') %>
+<h1>Редактирование группы</h1>
+<p>Группа <%= @group.name %></p>
+<br>
+<div>
+  <div>
+    <%= form_for [@group] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Изменить группу", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<td><%= link_to 'Удалить', group_path(@group), method: :delete %></td>

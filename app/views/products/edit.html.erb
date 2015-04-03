@@ -1,0 +1,20 @@
+<h1>Products#edit</h1>
+<p>Find me in app/views/products/edit.html.erb</p>
+<% provide(:title, 'Редактирование товара') %>
+<h1>Редактирование товара</h1>
+<p>Группа <%= @group.name %>, товар <%= @product.name %></p>
+<br>
+<div>
+  <div>
+    <%= form_for [@group, @product] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :group_id %>
+      <%= f.text_field :group_id %>
+
+      <%= f.submit "Изменить товар", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<td><%= link_to 'Удалить', group_product_path(@product.group_id, @product), method: :delete %></td>
