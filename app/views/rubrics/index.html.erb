@@ -1,0 +1,14 @@
+<h1>Rubrics#index</h1>
+<p>Find me in app/views/rubrics/index.html.erb</p>
+
+<p>ID, уровень, название, количество товаров со словом "молоко"</p>
+<% @result_sql_query.to_a.each do |row| %>
+  <%= row['id'] %>, <%= row['cached_level'] %>, <%= row['title'] %>, <%= row['count_of_products'] %>
+  <br>
+<% end %>
+
+<p>ID, уровень, название, количество товаров со словом "молоко"</p>
+<% @result_ar_query.to_a.each do |row| %>
+  <%= row %>
+  <br>
+<% end %>
