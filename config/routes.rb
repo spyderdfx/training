@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'rubrics', to: 'rubrics#index'
+  get 'rubrics/export', to: 'rubrics#export'
 
   get 'home/index'
 
