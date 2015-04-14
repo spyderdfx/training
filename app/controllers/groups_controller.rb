@@ -1,17 +1,17 @@
 class GroupsController < ApplicationController
   def show
-  	@group = Group.find params[:id]
+    @group = Group.find params[:id]
   end
 
   def index
-  	@groups = Group.all
- 	end
+    @groups = Group.all
+   end
 
   def new
-  	@group = Group.new
+    @group = Group.new
   end
 
- 	def create
+   def create
     @group = Group.new(name: params[:group][:name])
     if @group.save
       redirect_to(group_path(@group))
