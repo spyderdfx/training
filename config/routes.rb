@@ -2,6 +2,15 @@ Rails.application.routes.draw do
   get 'rubrics', to: 'rubrics#index'
   get 'rubrics/export', to: 'rubrics#export'
 
+  get 'search', to: 'search#index'
+  post 'search/upload', to: 'search#upload'
+  get 'search/status', to: 'search#status'
+
+  #resources :search do
+  #  collection { post :upload }
+  #  collection { get :status }
+  #end
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
