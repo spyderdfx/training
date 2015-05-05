@@ -17,6 +17,6 @@ class SearchController < ApplicationController
   def status
     session[:status] = Resque::Plugins::Status::Hash.get(session[:search_job_id])
     @session_status = session[:status]
-    render 'index'
+    render json: @session_status
   end
 end

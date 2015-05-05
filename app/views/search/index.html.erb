@@ -15,10 +15,7 @@
 <% end %>
 
 <h1>Состояние задачи:</h1>
-<p><%= button_to "Обновить", { :action => :status}, :method => :get %></p>
-<% if @session_status != nil %>
-  <p>Время запуска: <%= @session_status.time %></p>
-  <p>Процент выполнения: <%= @session_status.pct_complete %></p>
-  <p>Статус: <%= @session_status.status %></p>
-  <p>Сообщение: <%= @session_status.message %></p>
-<% end %>
+
+<div id='session_status'>
+
+</div>
